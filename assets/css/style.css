@@ -1,0 +1,126 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Menú lateral (desktop) */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      background-color: #5f81a7;
+      color: white;
+      height: 100vh;
+      position: fixed;
+    }
+
+    .sidebar h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Galería de imágenes */
+    .gallery {
+      margin-left: 270px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .gallery-item img:hover {
+      filter: grayscale(0%);
+    }
+
+    .gallery-item p {
+      text-align: center;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Vista móvil */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .gallery {
+        margin-left: 0;
+      }
+    }
+ 
